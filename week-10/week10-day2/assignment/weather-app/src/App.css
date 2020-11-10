@@ -76,8 +76,8 @@ body {
 
 .location-box .location {
   color: #FFF;
-  font-size: 32px;
-  font-weight: 500;
+  font-size: 50px;
+  font-weight: 600;
   text-align: center;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
   margin-bottom: 10px;
@@ -85,7 +85,7 @@ body {
 
 .location-box .date {
   color: #FFF;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 300;
   font-style: italic;
   text-align: center;
@@ -104,7 +104,7 @@ body {
   border-radius: 16px;
   padding: 15px 25px;
   color: #FFF;
-  font-size: 102px;
+  font-size: 150px;
   font-weight: 900;
   text-shadow: 3px 6px rgba(50,50,70,0.5);
   text-align: center;
@@ -112,8 +112,16 @@ body {
 }
 
 .weather-box .weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #FFF;
-  font-size: 48px;
+  font-size: 50px;
   font-weight: 700;
   text-shadow: 3px 3px rgba(50,50,70,0.5);
+}
+
+.icon {
+  margin-left: 20px;
+  height: 100px;
 }

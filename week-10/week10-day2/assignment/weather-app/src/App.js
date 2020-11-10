@@ -30,6 +30,7 @@ class App extends Component {
           country: result.sys.country,
           temp: result.main.temp,
           description: result.weather[0].main,
+          icon: `http://openweathermap.org/img/w/${result.weather[0].icon}.png`
         })
       })
   }
@@ -79,7 +80,8 @@ class App extends Component {
               </div>
               <div className="weather-box">
                 <div className="temp">{Math.round(this.state.temp)}°</div>
-                <div className="weather">{this.state.description}</div>
+                <div className="weather">{this.state.description} <img className="icon" src={this.state.icon} ></img></div>
+                
               </div>
             </div>
           ) : ('')}
