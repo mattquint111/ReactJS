@@ -1,40 +1,41 @@
-import React, { Component } from 'react'
-import DisplayCounter from './components/DisplayCounter'
-
+import React, { Component } from "react";
+import PhotoList from "./components/PhotoList";
 
 class App extends Component {
+    constructor() {
+        super();
 
-  constructor() {
-    super()
+        this.state = {
 
-    this.state = {
-      counter: 0,
+        }
     }
-    
-  }
-  
-  handleIncrementClick = () => {
-    this.setState({
-      counter: this.state.counter + 1
-    })
-  }
 
-  handleDecrementClick = () => {
-    this.setState({
-      counter: this.state.counter - 1
-    })
-  }
+    handleOnChange = (e) => {
 
-  render() {
-    return (
-      <div>
-        <DisplayCounter ctr = {this.state.counter} />
-        <button onClick= {this.handleIncrementClick}>Increment</button>
-        <br></br>
-        <button onClick={this.handleDecrementClick}>Decrement</button>
-      </div>
-    )
-  }
+      this.setState({
+        [e.target.name]: e.target.value
+      })
+    };
+
+    render() {
+        return (
+            <div>
+                <input
+                    type="text"
+                    onChange={this.handleOnChange}
+                    placeholder="Name"
+                    name='name'
+                />
+                <input
+                    type="text"
+                    onChange={this.handleOnChange}
+                    placeholder="Age"
+                    name='age'
+                />
+                <button>Submit</button>
+            </div>
+        );
+    }
 }
 
-export default App
+export default App;
