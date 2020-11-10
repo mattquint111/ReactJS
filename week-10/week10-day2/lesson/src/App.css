@@ -4,5 +4,44 @@
   color: white;
   width: 100%;
   height: 100vh;
+  box-sizing: border-box;
+}
+
+.stepCont {
+  height: 30px;
+  display: flex;
+}
+
+.counterStep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 2px solid cyan;
+  background: darkcyan;
+  width: 50px;
+}
+
+.counterBtn {
+  font-size: 1.1em;
+  /* margin: 0 5px; */
+  width: 30px;
+  background: darkorchid;
+  color: white;
+  border: 2px solid plum;
+  cursor: pointer;
+  outline: none;
+}
+.counterBtn:hover {
+  background: orchid;
+}
+
+.decrease {
+  border-radius: 16px 0 0 16px
+}
+
+.increase {
+  border-radius: 0 16px 16px 0;
 }
 

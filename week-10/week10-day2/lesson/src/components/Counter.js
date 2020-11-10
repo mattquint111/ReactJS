@@ -4,21 +4,32 @@ class Counter extends Component {
 
     constructor() {
         super()
-        this.counterValue = 0
+        // this.counterValue = 0
 
-        
-        
+        // STATE
+        // any time state is updated -> render() is called
+        this.state = {
+            counter: 0,
+        }
     }
 
     handleIncrement = () => {
-        
-        console.log(this)
+        // update state & increment counter
+        // don't just update state -> create new state object
+        // setState is an async operation
+        this.setState({
+            counter: this.state.counter + 1
+        },() => {
+            // second optional arg, fired after state is updated
+            console.log(this.state.counter)
+        })
     }
 
     render() {
+
         return(
             <div className="counterCont">
-                <h1>0</h1>
+                <h1>{this.state.counter}</h1>
                 <button onClick={this.handleIncrement}>Increment</button>
             </div>
         )
